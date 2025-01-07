@@ -12,10 +12,16 @@
             resultsContainer: document.getElementById('results-container'),
             json: '{{ "/assets/data/search.json" | relative_url }}',
             searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="meta"> <i class="fa fa-calendar fa-fw"></i> {date} <div class="right"><i class="fa fa-tags fa-fw"></i> {category}</div></div><p>{excerpt}</p></div><hr> ',
-            noResultsText: '{{ "Nie znaleziono" }}',
+            noResultsText: '<span class="no-results">Nie znaleziono</span>',
             limit: 10,
             fuzzy: false,
             exclude: []
         })
         </script>
 </section>
+
+<style>
+    .no-results {
+        color: red;
+    }
+</style>
