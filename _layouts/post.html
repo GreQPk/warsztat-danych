@@ -11,11 +11,11 @@ layout: default
   </div>
 
   <div class="date">
-    <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;Date:<span style="color: #333333; font-weight: normal;">&nbsp;{{ page.date | date: "%B %e, %Y" }}</span>
+    <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;Data publikacji:<span style="color: #333333; font-weight: normal;">&nbsp;{{ page.date | date: "%B %e, %Y" }}</span>
   </div>
 
   <div class="post-categories">
-    <i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Tags:&nbsp;
+    <i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Tagi:&nbsp;
       {% if post %}
       {% assign categories = post.categories %}
       {% else %}
@@ -28,7 +28,7 @@ layout: default
   </div>
 
   <div class="share-post">
-    <i class="fa fa-share-alt-square fa-fw" aria-hidden="true"></i>&nbsp;Share:&nbsp;
+    <i class="fa fa-share-alt-square fa-fw" aria-hidden="true"></i>&nbsp;Podziel się:&nbsp;
     {% include share-buttons.html %}
   </div>
 
