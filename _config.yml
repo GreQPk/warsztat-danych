@@ -32,11 +32,14 @@ navigation_links:
   - title: Blog
     url: /
 
-  - title: About
+  - title: O mnie
     url: /about
 
-  - title: Search
+  - title: Szukaj
     url: /search
+
+  - title: Polecane
+    url: /
 
 # Footer icons
 footer_links:
