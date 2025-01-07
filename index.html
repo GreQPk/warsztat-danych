@@ -2,27 +2,35 @@
 layout: default
 ---
 
+<head>
+  <style>
+    .post h2 a {
+      color: #333333; /* Kolor początkowy */
+      text-decoration: none; /* Brak podkreślenia */
+    }
+
+    .post h2 a:hover {
+      color: #000000; /* Kolor po najechaniu */
+    }
+  </style>
+</head>
+
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post">
-
-    <h2><a href="{{ site.baseurl }}{{ post.url }}" style="color: #FF5733; text-decoration: none;">{{ post.title }}</a></h2>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
     <div class="entry">
       {% if post.content contains '<!--more-->' %}
-
-      {{ post.excerpt }}
-
+        {{ post.excerpt }}
       {% else %}
-
-      {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
-
+        {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
       {% endif %}
     </div>
 
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Czytaj więcej&nbsp;&#183;{% include read-time.html content=post.content %}</a>
   </article>
   {% endfor %}
-
+  
   {% include pagination.html %}
 </div>
