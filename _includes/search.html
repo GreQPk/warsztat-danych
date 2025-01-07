@@ -12,7 +12,7 @@
             resultsContainer: document.getElementById('results-container'),
             json: '{{ "/assets/data/search.json" | relative_url }}',
             searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="meta"> <i class="fa fa-calendar fa-fw"></i> {date} <div class="right"><i class="fa fa-tags fa-fw"></i> {category}</div></div><p>{excerpt}</p></div><hr> ',
-            noResultsText: '<span class="no-results">Nie znaleziono</span>',
+            noResultsText: '<div class="no-results">Nie znaleziono</div>',
             limit: 10,
             fuzzy: false,
             exclude: []
@@ -23,5 +23,12 @@
 <style>
     .no-results {
         color: red;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; /* Ustawia wysokość kontenera na 50% widoku okna */
     }
 </style>
