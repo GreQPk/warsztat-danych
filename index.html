@@ -6,7 +6,7 @@ layout: default
   {% for post in paginator.posts %}
   <article class="post">
 
-    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}" style="color: #FF5733; text-decoration: none;">{{ post.title }}</a></h2>
 
     <div class="entry">
       {% if post.content contains '<!--more-->' %}
@@ -20,7 +20,7 @@ layout: default
       {% endif %}
     </div>
 
-    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Czytaj więcej&nbsp;&#183;{% include read-time.html content=post.content %}</a>
   </article>
   {% endfor %}
 
