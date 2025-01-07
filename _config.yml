@@ -3,13 +3,13 @@
 #
 
 # Site locale
-lang: "en"
+lang: "pl"
 
 # Name of your site (displayed in the header)
-title: Forever Jekyll
+title: Warsztat Danych
 
 # Short bio or description (displayed in the header)
-description: A simple, elegant and full featured Jekyll theme
+description: Dziennik analizy i wizualizacji danych
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /assets/image/avatar.png
