@@ -1,0 +1,1 @@
+assets/image/logo.png
