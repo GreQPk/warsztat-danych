@@ -99,10 +99,10 @@ plugins:
   - jeckyll-staticman
 
 # Dodaj konfigurację Staticman
+# Staticman configuration
 staticman:
-  comments: 
-    enabled: true
-    branch: "main"
+  branch: "main"
+  endpoint: https://staticman.net/v3/entry/github/
 # Exclude these files from your production _site
 exclude:
   - Gemfile
