@@ -1,14 +1,9 @@
+# staticman.yml w katalogu głównym repozytorium
 comments:
-  allowedFields: 
-    - name
-    - email
-    - message
+  allowedFields: ["name", "email", "message"]
   branch: "main"
-  commitMessage: "Nowy komentarz: {fields.name}"
-  path: "_data/comments/{options.slug}"
-  filename: "{@id}"
+  commitMessage: "Nowy komentarz"
   format: "yaml"
   moderation: true
-  requiredFields: 
-    - name
-    - message
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "message"]
