@@ -40,4 +40,29 @@ layout: default
     {% include post-nav.html %}
   </div>
 
+  <!-- Formularz komentarzy -->
+  <div class="comments-section">
+    <h3>Komentarze</h3>
+    <ul>
+      {% for comment in site.data.comments %}
+        {% if comment[1].post == page.url %}
+          <li>
+            <p><strong>{{ comment[1].name }}</strong>: {{ comment[1].message }}</p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <h3>Dodaj komentarz</h3>
+    <form action="https://api.staticman.net/v3/entry/github/TwojaNazwaUzytkownika/warsztat-danych/main/comments" method="post">
+      <input type="hidden" name="fields[post]" value="{{ page.url }}">
+      <label for="name">Imię:</label>
+      <input type="text" id="name" name="fields[name]" required>
+      <label for="email">E-mail (opcjonalny):</label>
+      <input type="email" id="email" name="fields[email]">
+      <label for="message">Komentarz:</label>
+      <textarea id="message" name="fields[message]" required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </div>
 </article>
