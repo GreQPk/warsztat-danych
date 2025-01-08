@@ -100,9 +100,11 @@ plugins:
 
 # Dodaj konfigurację Staticman
 # Staticman configuration
+# Dodaj konfigurację Staticman
 staticman:
-  branch: "main"
-  endpoint: https://staticman.net/v3/entry/github/
+  api: 'https://staticman.net/v3/entry/github/'
+  username: 'greqpk'
+  repository: 'warsztat-danych'
 # Exclude these files from your production _site
 exclude:
   - Gemfile
