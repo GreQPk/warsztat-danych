@@ -98,7 +98,11 @@ plugins:
   - jekyll-github-metadata
   - jeckyll-staticman
 
-staticman_url: https://api.staticman.net/v3/entry/github/GreQPk/warsztat-danych/main/comments
+# Dodaj konfigurację Staticman
+staticman:
+  comments: 
+    enabled: true
+    branch: "main"
 # Exclude these files from your production _site
 exclude:
   - Gemfile
