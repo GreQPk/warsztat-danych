@@ -1,0 +1,16 @@
+comments:
+  path: "_data/comments"
+  filename: "{options.post}-{date}"
+  fields:
+    name:
+      type: "string"
+      required: true
+    email:
+      type: "string"
+      required: false
+    message:
+      type: "string"
+      required: true
+    post:
+      type: "string"
+  branch: "main"
