@@ -1,9 +1,15 @@
-# staticman.yml w katalogu głównym repozytorium
+# Poprawny szablon konfiguracji
 comments:
   allowedFields: ["name", "email", "message"]
   branch: "main"
   commitMessage: "Nowy komentarz"
   format: "yaml"
-  moderation: true
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "message"]
+  requiredFields: 
+    - name
+    - message
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
