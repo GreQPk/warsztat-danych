@@ -55,6 +55,7 @@ print(type(ds))
 
 Domyślny, unikalny indeks dodany został automatycznie (możemy go również utworzyć sami wykorzystując do tego parametr index w metodzie Series). DataSeries zawsze przechowuje dane tego samego typu. W powyższym przypadku jest to int64.
 Ok, wiemy już jak tworzyć DataSeries, ale zasadniczym pytaniem, które pierwsze pojawiło się w mojej głowie gdy zaczynałem przygodę z DataSeries, było mainstreamowe : „A na co to komu? A komu to potrzebne?”, skoro w swojej dotychczasowej karierze nie spotkałem się jeszcze z jednokolumnowym zestawem danych. Po głębszym zrozumieniu ich roli przekonałem się, że ten element w analizę danych jest równie ważny, jak DataFrame.
+
 Series wykorzystuje się podczas pracy z :
 
 <strong> 1.jednowymiarowymi danymi </strong>
