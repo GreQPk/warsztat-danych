@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Pandas:DataSeries vs DataFrame. Czym są seria i ramka danych w Pandas?
+title: Czym są seria i ramka danych w Pandas?
 categories: [pandas, dataseries,dataframe]
 ---
 
 Tak jak obiecałem w  pierwszym wpisie, rozpoczniemy od podstaw Pandas-a. W tym poście omówię kluczowe koncepcje biblioteki Pandas wraz ze strukturami danych stanowiącymi podstawę pracy z danymi.
+Ale zanim zaczniemy pozwolę sobie na kilka słów odnośnie początków tej biblioteki.
 
 ###  Pandas, czyli potrzeba matką wynalazków
 
