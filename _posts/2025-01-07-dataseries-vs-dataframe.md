@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pandas: DataSeries vs DataFrame. Czym są seria i ramka danych w Pandas?
+title: Pandas:DataSeries vs DataFrame. Czym są seria i ramka danych w Pandas?
 categories: [pandas, dataseries,dataframe]
 ---
 
