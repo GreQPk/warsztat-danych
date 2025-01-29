@@ -77,6 +77,20 @@ ds = pd.Series(temperature)
 {% endhighlight %}
 
 Każda temperatura ma teraz swój unikalny indeks umożliwiający dostęp do konkretnej wartości. 
+
+{% highlight c %}
+
+	0
+0	21
+1	23
+2	20
+3	24
+4	26
+
+
+{% endhighlight %}
+
+
 Przykładowo ds[0] zwróci nam 21. Teraz gdy mamy już nasz obiekt Series ds sprawdźmy jaka była minimalna, maksymalna i średnia temperatura w naszym zbiorze danych. 
 
 {% highlight c %}
