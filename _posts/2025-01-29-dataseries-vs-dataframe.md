@@ -30,4 +30,30 @@ Import biblioteki Pandas wykonujemy za pomocą konwencji:
 import pandas as pd
 {% endhighlight %}
 
-Gdzie pd to alias wykorzystywany później w kodzie w celu skrócenia wywołań funkcji zaimportowanej biblioteki.
+Gdzie pd to alias wykorzystywany później w kodzie w celu skrócenia wywołań funkcji zaimportowanej biblioteki. Kolejnym krokiem jest już sama praca z danymi. Ten krok omówię w kolejnym wpisie. 
+
+### DataSeries
+
+Seria najczęściej składa się z jednowymiarowej listy z kontekstem, lub stanowi pojedynczą kolumnę z DataFrame. Oczywiście dla mnie teoria musi być zawsze poparta praktyką, wtedy wszystko staje się bardziej zrozumiałe. Serie najłatwiej utworzyć wykorzystując do tego listę Pythona.
+
+
+{% highlight c %}
+
+data = [10,15,20,25,30]
+ds = pd.Series(data)
+print(ds)
+
+{% endhighlight %}
+
+Tym sposobem utworzona została DataSeries. Możemy to również szybko zweryfikować za pomocą funkcji type.
+
+{% highlight c %}
+
+print(type(ds))
+
+{% endhighlight %}
+
+
+
+
+
