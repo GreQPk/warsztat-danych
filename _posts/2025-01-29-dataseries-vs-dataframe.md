@@ -15,10 +15,10 @@ Od tego momentu rozwój Pandas znacznie przyśpieszył.
 Pierwsze wersje biblioteki pozwalały na przeprowadzanie podstawowych operacji na tabelach danych (DataFrame) oraz na pracy z szeregami czasowymi (DataSeries). 
 Pomimo, iż  Wes McKinney zrezygnował z aktywnego rozwoju projektu w 2013 roku, dzięki społeczności programistów z całego świata, dotychczas postało wiele wersji biblioteki, a sam Pandas został uznany za stabilne narzędzie produkcyjne. 
 Łatwość użycia, integracja z ekosystemem Pythona i wszechstronność sprawia, że analiza danych to czysta przyjemność nawet dla początkujących adeptów analityki biznesowej.
-
+<em>
 Ciekawostka:
 Nazwa Pandas wywodzi się od terminu Panel Data, który odnosi się do zestawów danych wielowymiarowych – to właśnie praca z tego typu danymi była pierwotnym celem powstania tej biblioteki.
-
+</em>
 
 ### Zaczynamy!
 
