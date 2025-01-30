@@ -237,8 +237,8 @@ Różnica jest prosta. Metody to funkcje dostępne dla obiektów Pandas, które 
 {% highlight c %}
 # Zmiana nazwy kolumny
 
-df.rename(columns = {'temperatura (°C)':'temperatura'}, inplace=True)
-print(df.head())
+df.rename(columns = {'temperatura (°C)':'temperatura'})
+print(df)
 
   godzina  temperatura      pogoda
 0   06:00            5   pochmurno
@@ -249,7 +249,7 @@ print(df.head())
 
 # Opis statystyczny danych (zwraca podstawowe statystyki opisowe dla kolumn numerycznych w zestawie danych)
 
-df.describe()
+print(df.describe())
 
 temperatura (°C)
 count          5.000000
@@ -264,8 +264,7 @@ max           18.000000
 
 #Usunięcie kolumny z DataFrame
 
-df.drop(columns =['pogoda'],inplace=True)
-print(df)
+df.drop(columns =['pogoda'])
 
   godzina  temperatura (°C)
 0   06:00                 5
@@ -285,7 +284,7 @@ print(df)
 
 df.shape
 
-(5, 2) # 5 wierszy, 3 kolumny
+(5, 3) # 5 wierszy, 3 kolumny
 
 # Wyświetlenie nazw kolumn
 
@@ -296,6 +295,7 @@ Index(['godzina', 'temperatura (°C)', 'pogoda'], dtype='object')
 
 # Sprawdzenie typu danych w kolumnach
 
+df.dtypes
 	0
 godzina	object
 temperatura (°C) int64
