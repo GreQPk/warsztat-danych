@@ -58,7 +58,7 @@ Ok, wiemy już jak tworzyć DataSeries, ale zasadniczym pytaniem, które pierwsz
 
 Series wykorzystuje się podczas pracy z :
 
-<strong> 1.jednowymiarowymi danymi </strong>
+<strong> 1. JEDNOWYMIAROWYMI DANYMI </strong>
    
 Czym właściwie są te jednowymiarowe dane?
 
@@ -110,6 +110,77 @@ Maksymalna temperatura: 26
 
 {% endhighlight %}
 
+Przy okazji sprawdźmy ile razy odczyt temperatury w ciągu dnia był powyżej średniej:
+
+{% highlight c %}
+
+temp_above_mean = ds[ds > ds.mean()]
+print(f"liczba odczytw temperatury powyżej średniej:{temp_above_mean.count()}")
+
+liczba odczytw temperatury powyżej średniej:3
+
+{% endhighlight %}
+
+<strong> 2. POJEDYNCZYMI KOLUMNAMI Z TABEL </strong>
+
+Ten podpunkt z początku może wydawać się dziwny, z uwagi na to, że gdy mamy tabelę zazwyczaj jest ona wczytywana do notatnika jako DataFrame, ale może się zdarzyć taki przypadek, gdzie planujemy wykonywać operacje tylko na jednej zmiennej bez rozszerzania analiz o kolejne zmienne (np.  chcemy wyliczyć statystyki opisowe wyłącznie dla temperatury) . DataSeries jest dla takiego przypadku wystarczającym narzędziem.
+
+Tym razem podczas gromadzenia danych o temperaturze w ciągu dnia zawarliśmy również informację o godzinie pomiaru i pogodzie. Nasze dane zostały zapisane w formie tabeli.
+
+
+godzina               | temperatura (st.C)    | pogoda                 
+--------------------- | --------------------- | --------------------- 
+6:00                  | 5                     | pochmurno     
+9:00                  | 10                    | słonecznie 
+12:00                 | 15                    | słonecznie 
+15:00                 | 18                    | słonecznie 
+18:00                 | 12                    | pochmurno
+
+W rzeczywistej pracy często używamy plików XLSX lub CSV, które importujemy do notebooka. Na potrzeby demonstracji stworzę taki zbiór danych za pomocą słownika, a następnie wyodrębnię kolumnę „temperatura (st. C)” jako DataSeries.
+
+{% highlight c %}
+
+dane = {
+    "godzina": ["06:00", "09:00", "12:00", "15:00", "18:00"],
+    "temperatura (°C)": [5, 10, 15, 18, 12],
+    "pogoda": ["pochmurno", "słonecznie", "słonecznie", "słonecznie", "pochmurno"]
+}
 
 
 
+{'godzina': ['06:00', '09:00', '12:00', '15:00', '18:00'],
+ 'temperatura (°C)': [5, 10, 15, 18, 12],
+ 'pogoda': ['pochmurno',
+  'słonecznie',
+  'słonecznie',
+  'słonecznie',
+  'pochmurno']}
+
+
+{% endhighlight %}
+
+Tutaj tak jak wspomniałem powyżej mamy dwie opcje: Stworzenie bezpośrednio z wybranej kolumny DataSeries lub stworzenie DataFrame, z którego wywołanie jednej kolumny spowoduje, że stanie się ona automatycznie Series.
+Obie metody prowadzą do tego samego rezultatu. Przysłowiowy diabeł tkwi w szczegółach. Jeśli planujemy operować tylko na jednej kolumnie ze zbioru danych lepiej od razu użyć Series, zamiast tworzyć nadmiarowy DataFrame. Tak zrobimy poniżej. Przykład z automatycznym utworzeniem DataSeries z DataFrame pokaże podczas omawiania DataFrame.
+
+{% highlight c %}
+ds_temp = pd.Series(dane['temperatura (°C)'], name='temperatura')
+
+print(ds_temp)
+
+0     5
+1    10
+2    15
+3    18
+4    12
+Name: temperatura, dtype: int64
+
+{% endhighlight %}
+
+Możemy w prosty sposób to sprawdzić  przy uzyciu  print(type(ds_temp)), lub rozpocząć analizę.
+
+{% highlight c %}
+
+print(type(ds_temp))
+<class 'pandas.core.series.Series'>
+
+{% endhighlight %}
