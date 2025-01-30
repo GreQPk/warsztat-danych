@@ -313,5 +313,6 @@ To tylko część możliwości, które oferuje biblioteka Pandas będąca fundam
 
 W dzisiejszym wpisie to wszystko. Jeśli udało Ci się dotrwać do końca, dziękuję i gratuluję wytrwałości! Jako że dopiero zaczynam dzielić się swoją wiedzą, będę bardzo wdzięczny za wszelkie uwagi, które pomogą mi poprawić jakość i przystępność tworzonych materiałów. 
 
-[Plik .ipynb z kodem](https://github.com/GreQPk/warsztat-danych/blob/main/files/Czym_s%C4%85_seria_i_ramka_danych_w_Pandas_.ipynb)
+<a href="https://github.com/GreQPk/warsztat-danych/raw/main/files/Czym_s%C4%85_seria_i_ramka_danych_w_Pandas_.ipynb" download>Pobierz plik .ipynb z kodem</a>
+
 
