@@ -222,19 +222,55 @@ print(df) #jako zwykły tekst (lub df bez funkcji print() jako tabela sformatowa
 3   15:00                18  słonecznie
 4   18:00                12   pochmurno
 
-df #jako tabela sformatowana w HTML
-
-
 {% endhighlight %}
 
 DataFrame również otrzymuje domyślny indeks liczbowy, który możemy dostosować np. zastępując go inną kolumną z zestawu danych. W przypadku tej struktury danych mamy możliwość stosowania wielu metod i atrybutów, które umożliwiają efektywną manipulację danymi i ich analizę. Poniżej przedstawię kilka wybranych przykładów metod i atrybutów wykorzystywanych podczas pracy z ramką danych w Pandas, które omówię bardziej szczegółowo w kolejnych wpisach.
 
+Na początek warto wyjaśnić, czym są metody i atrybuty oraz jaka jest między nimi różnica.
+
+Różnica jest prosta. Metody to funkcje dostępne dla obiektów Pandas, które mogą modyfikować dane lub zwracać przekształcone wyniki – można je rozpoznać po nawiasach () na końcu nazwy. Z kolei atrybuty to właściwości obiektu, które nie wykonują żadnych operacji, a jedynie zwracają informacje o danych. Nie wymagają nawiasów, są używane do eksploracji danych.
+
+<strong> Metody </strong>
 
 
+{% highlight c %}
+# Zmiana nazwy kolumny
 
+df.rename(columns = {'temperatura (°C)':'temperatura'}, inplace=True)
+print(df.head())
 
+  godzina  temperatura      pogoda
+0   06:00            5   pochmurno
+1   09:00           10  słonecznie
+2   12:00           15  słonecznie
+3   15:00           18  słonecznie
+4   18:00           12   pochmurno
 
+# Opis statystyczny danych (zwraca podstawowe statystyki opisowe dla kolumn numerycznych w zestawie danych)
 
+df.describe()
+
+temperatura (°C)
+count          5.000000
+mean          12.000000
+std            4.949747
+min            5.000000
+25%           10.000000
+50%           12.000000
+75%           15.000000
+max           18.000000
+
+df.drop(columns =['pogoda'],inplace=True)
+print(df)
+
+  godzina  temperatura (°C)
+0   06:00                 5
+1   09:00                10
+2   12:00                15
+3   15:00                18
+4   18:00                12
+
+{% endhighlight %}
 
 
 
