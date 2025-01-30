@@ -310,5 +310,5 @@ To tylko część możliwości, które oferuje biblioteka Pandas będąca fundam
 
 #### Podsumowanie
 
-W dzisiejszym wpisie to wszystko. Jeśli udało Ci się dotrwać do końca, dziękuję i gratuluję wytrwałości! Jako że dopiero zaczynam dzielić się swoją wiedzą, będę bardzo wdzięczny za wszelkie uwagi, które pomogą mi poprawić jakość i przystępność tworzonych materiałów. Jeśli jesteś na początku swojej drogi z Pandas, szczególnie interesuje mnie, czy struktura i słownictwo są dla Ciebie zrozumiałe.
+W dzisiejszym wpisie to wszystko. Jeśli udało Ci się dotrwać do końca, dziękuję i gratuluję wytrwałości! Jako że dopiero zaczynam dzielić się swoją wiedzą, będę bardzo wdzięczny za wszelkie uwagi, które pomogą mi poprawić jakość i przystępność tworzonych materiałów. 
 
