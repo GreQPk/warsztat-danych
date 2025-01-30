@@ -224,7 +224,7 @@ print(df) #jako zwykły tekst (lub df bez funkcji print() jako tabela sformatowa
 
 {% endhighlight %}
 
-DataFrame również otrzymuje domyślny indeks liczbowy, który możemy dostosować np. zastępując go inną kolumną z zestawu danych. W przypadku tej struktury danych mamy możliwość stosowania wielu metod i atrybutów, które umożliwiają efektywną manipulację danymi i ich analizę. Poniżej przedstawię kilka wybranych przykładów metod i atrybutów wykorzystywanych podczas pracy z ramką danych w Pandas, które omówię bardziej szczegółowo w kolejnych wpisach.
+DataFrame również otrzymuje domyślny indeks liczbowy, który możemy dostosować np. zastępując go inną kolumną z zestawu danych. W tej struktury danych mamy możliwość stosowania wielu metod i atrybutów, które umożliwiają efektywną manipulację danymi i ich analizę. Series również posiadają metody i atrybuty, lecz są one dostosowane do jednowymiarowych danych. Poniżej przedstawię kilka wybranych przykładów metod i atrybutów wykorzystywanych podczas pracy z ramką danych w Pandas, które omówię bardziej szczegółowo w kolejnych wpisach.
 
 Na początek warto wyjaśnić, czym są metody i atrybuty oraz jaka jest między nimi różnica.
 
@@ -260,6 +260,9 @@ min            5.000000
 75%           15.000000
 max           18.000000
 
+
+#Usunięcie kolumny z DataFrame
+
 df.drop(columns =['pogoda'],inplace=True)
 print(df)
 
@@ -273,5 +276,39 @@ print(df)
 {% endhighlight %}
 
 
+<strong> Atrybuty </strong>
 
+{% highlight c %}
+
+# Sprawdzenie kształtu tabeli (kolumny,wiersze)
+
+df.shape
+
+(5, 2) # 5 wierszy, 3 kolumny
+
+# Wyświetlenie nazw kolumn
+
+df.columns 
+
+Index(['godzina', 'temperatura (°C)', 'pogoda'], dtype='object')
+
+
+# Sprawdzenie typu danych w kolumnach
+
+	0
+godzina	object
+temperatura (°C) int64
+pogoda	object
+
+dtype: object
+
+{% endhighlight %}
+
+To tylko część możliwości, które oferuje biblioteka Pandas będąca fundamentem analizy danych w Pythonie. Uważam, że poznanie jej pełnego potencjału otwora przed nami szerokie możliwości pracy z danymi. 
+
+
+
+#### Podsumowanie
+
+W dzisiejszym wpisie to wszystko. Jeśli udało Ci się dotrwać do końca, dziękuję i gratuluję wytrwałości! Jako że dopiero zaczynam dzielić się swoją wiedzą, będę bardzo wdzięczny za wszelkie uwagi, które pomogą mi poprawić jakość i przystępność tworzonych materiałów. Jeśli jesteś na początku swojej drogi z Pandas, szczególnie interesuje mnie, czy struktura i słownictwo są dla Ciebie zrozumiałe.
 
