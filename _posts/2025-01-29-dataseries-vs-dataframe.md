@@ -56,7 +56,7 @@ print(type(ds))
 Domyślny, unikalny indeks dodany został automatycznie (możemy go również utworzyć sami wykorzystując do tego parametr index w metodzie Series). DataSeries zawsze przechowuje dane tego samego typu. W powyższym przypadku jest to int64.
 Ok, wiemy już jak tworzyć DataSeries, ale zasadniczym pytaniem, które pierwsze pojawiło się w mojej głowie gdy zaczynałem przygodę z DataSeries, było mainstreamowe : „A na co to komu? A komu to potrzebne?”, skoro w swojej dotychczasowej karierze nie spotkałem się jeszcze z jednokolumnowym zestawem danych. Po głębszym zrozumieniu ich roli przekonałem się, że ten element w analizę danych jest równie ważny, jak DataFrame.
 
-Series wykorzystuje się podczas pracy z :
+<strong> Series wykorzystuje się podczas pracy z : </strong>
 
 <strong> 1. JEDNOWYMIAROWYMI DANYMI </strong>
    
@@ -146,7 +146,7 @@ dane = {
     "pogoda": ["pochmurno", "słonecznie", "słonecznie", "słonecznie", "pochmurno"]
 }
 
-
+print(dane)
 
 {'godzina': ['06:00', '09:00', '12:00', '15:00', '18:00'],
  'temperatura (°C)': [5, 10, 15, 18, 12],
@@ -184,3 +184,62 @@ print(type(ds_temp))
 <class 'pandas.core.series.Series'>
 
 {% endhighlight %}
+
+
+### DataFrame
+
+
+DataFrame w Pandas to dwuwymiarowa tabela z wierszami i kolumnami. Jak już wiesz, każda kolumna to osobny DataSeries ( czyli jednowymiarowy zestaw danych). Struktura ta przypomina arkusz kalkulacyjny, w którym każda kolumna może zawierać różny typ danych.
+
+Najczęściej DataFrame tworzymy poprzez importowanie danych z plików .csv lub .xslx do notatnika. DataFrame możemy też utworzyć ręcznie korzystając ze słownika Python].
+Wykorzystajmy do tego kod, który zaprezentowałem przy omawianiu DataSeries. 
+
+
+{% highlight c %}
+
+dane = {
+    "godzina": ["06:00", "09:00", "12:00", "15:00", "18:00"],
+    "temperatura (°C)": [5, 10, 15, 18, 12],
+    "pogoda": ["pochmurno", "słonecznie", "słonecznie", "słonecznie", "pochmurno"]
+}
+
+{% endhighlight %}
+
+Po utworzeniu słownika list wykorzystujemy konwencję pd.DataFrame(dane). Klucze słownika stają się nazwami kolumn, a wartości – listami reprezentującymi poszczególne wiersze w utworzonych kolumnach. 
+
+{% highlight c %}
+
+df = pd.DataFrame(dane)
+
+print(df) #jako zwykły tekst
+
+  godzina  temperatura (°C)      pogoda
+0   06:00                 5   pochmurno
+1   09:00                10  słonecznie
+2   12:00                15  słonecznie
+3   15:00                18  słonecznie
+4   18:00                12   pochmurno
+
+df #jako tabela sformatowana w HTML
+
+godzina	temperatura (°C)	pogoda
+0	06:00	5	pochmurno
+1	09:00	10	słonecznie
+2	12:00	15	słonecznie
+3	15:00	18	słonecznie
+4	18:00	12	pochmurno
+
+{% endhighlight %}
+
+DataFrame również otrzymuje domyślny indeks liczbowy, który możemy dostosować np. zastępując go inną kolumną z zestawu danych. W przypadku tej struktury danych mamy możliwość stosowania wielu metod i atrybutów, które umożliwiają efektywną manipulację danymi i ich analizę. Poniżej przedstawię kilka wybranych przykładów metod i atrybutów wykorzystywanych podczas pracy z ramką danych w Pandas, które omówię bardziej szczegółowo w kolejnych wpisach.
+
+
+
+
+
+
+
+
+
+
+
