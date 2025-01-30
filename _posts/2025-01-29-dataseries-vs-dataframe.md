@@ -211,7 +211,7 @@ Po utworzeniu słownika list wykorzystujemy konwencję pd.DataFrame(dane). Klucz
 
 df = pd.DataFrame(dane)
 
-print(df) #jako zwykły tekst
+print(df) #jako zwykły tekst (lub df bez funkcji print() jako tabela sformatowana w HTML)
 
   godzina  temperatura (°C)      pogoda
 0   06:00                 5   pochmurno
@@ -222,12 +222,6 @@ print(df) #jako zwykły tekst
 
 df #jako tabela sformatowana w HTML
 
-godzina	temperatura (°C)	pogoda
-0	06:00	5	pochmurno
-1	09:00	10	słonecznie
-2	12:00	15	słonecznie
-3	15:00	18	słonecznie
-4	18:00	12	pochmurno
 
 {% endhighlight %}
 
